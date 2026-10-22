@@ -5,18 +5,18 @@ const { obtenerUriMongoDB } = require("./entorno");
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 async function conectarBaseDeDatos() {
-    const uri = obtenerUriMongoDB();
+  const uri = obtenerUriMongoDB();
 
-    await mongoose.connect(uri);
+  await mongoose.connect(uri);
 }
 
 async function cerrarConexion() {
-    if (mongoose.connection.readyState !== 0) {
-        await mongoose.disconnect();
-    }
+  if (mongoose.connection.readyState !== 0) {
+    await mongoose.disconnect();
+  }
 }
 
 module.exports = {
-    conectarBaseDeDatos,
-    cerrarConexion
+  conectarBaseDeDatos,
+  cerrarConexion,
 };

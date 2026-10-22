@@ -6,7 +6,7 @@ module.exports = [
     ignores: ["node_modules/**"]
     },
     {
-    files: ["src/**/*.js"],
+    files: ["src/**/*.js", "scripts/**/*.js"],
     languageOptions: {
         ecmaVersion: "latest",
         sourceType: "commonjs",
